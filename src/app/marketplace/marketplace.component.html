@@ -1,4 +1,9 @@
-
-<input type="text">
-<button type="submit">Search</button>
-<h2 class="result"></h2>
+<div>
+    <label>Card Name:</label>
+    <br>
+    <input #newTitle>
+</div>
+<button (click)="cardInfo(newTitle.value)">Search</button>
+<div *ngFor="let card of cards">
+  <h2>{{card.name}}</h2>
+</div>
